@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EA Dubai Community</title>
+  <meta name="description" content="Enterprise architects in Dubai sharing how AI is reshaping the EA landscape.">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="hero-kicker">Dubai &middot; Enterprise Architecture</p>
+    <h1>EA Dubai Community</h1>
+    <p class="tagline">
+      A community of enterprise architects in Dubai sharing how AI is
+      reshaping the enterprise architecture landscape. Register, leave a
+      short testimony, share your point of view.
+    </p>
+  </header>
+
+  <main>
+    <section class="card" id="register-card">
+      <h2>Join the community</h2>
+      <form id="register-form" novalidate>
+        <label for="reg-name">Full name <span class="req">*</span></label>
+        <input id="reg-name" name="name" type="text" maxlength="120" required autocomplete="name">
+
+        <label for="reg-email">Email <span class="req">*</span></label>
+        <input id="reg-email" name="email" type="email" maxlength="254" required autocomplete="email">
+
+        <label for="reg-title">Job title <span class="opt">(optional)</span></label>
+        <input id="reg-title" name="title" type="text" maxlength="120" autocomplete="organization-title">
+
+        <label for="reg-org">Organization <span class="opt">(optional)</span></label>
+        <input id="reg-org" name="organization" type="text" maxlength="120" autocomplete="organization">
+
+        <p class="form-error" id="register-error" hidden></p>
+        <p class="form-note" id="register-note" hidden></p>
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <section class="card" id="composer-card" hidden>
+      <h2>Share your view</h2>
+      <p class="composer-who" id="composer-who"></p>
+      <form id="testimony-form" novalidate>
+        <label for="testimony-text">How is AI changing the EA landscape? <span class="opt">(max 500 characters)</span></label>
+        <textarea id="testimony-text" name="text" rows="5" maxlength="500" required></textarea>
+        <div class="counter"><span id="char-count">0</span>/500</div>
+        <p class="form-error" id="testimony-error" hidden></p>
+        <p class="form-note" id="testimony-note" hidden></p>
+        <button type="submit">Publish your view</button>
+      </form>
+    </section>
+
+    <section id="wall-section">
+      <h2 id="wall-count">Loading views&hellip;</h2>
+      <div id="wall"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>EA Dubai Community &mdash; architects sharing their view on AI.</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
